@@ -1,0 +1,18 @@
+### SublimeText ###
+# Cache files for Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# Workspace files are user-specific
+*.sublime-workspace
+*.sublime-project
+
+# build, src, pkg...
+src/
+pkg/
+kubo/
+go-ds-s3/
+kubo-s3-git/
+*.pkg.tar.xz
+test/build/
