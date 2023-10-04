@@ -27,7 +27,11 @@ makepkg --printsrcinfo > .SRCINFO
 git add PKGBUILD .SRCINFO .gitignore versions.txt
 git commit -m "useful commit message"
 git push
+cd ..
+rm -rf kubo-s3-git
 ```
+
+Changes will be reflected in: https://aur.archlinux.org/packages/kubo-s3-git
 
 Further Information:
 
