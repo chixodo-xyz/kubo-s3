@@ -2,7 +2,7 @@
 _pkgname=kubo
 _pkgplgname=$_pkgname-s3
 pkgname=$_pkgplgname-git
-pkgver=0.22.0.r0.g3f884d3
+pkgver=0.23.0.r0.g3a1a041
 pkgrel=1
 pkgdesc="IPFS Kubo with S3 Datastore Implementation"
 arch=('x86_64')
@@ -19,11 +19,13 @@ options=()
 install=
 source=('git+https://github.com/ipfs/kubo.git'
 				'git+https://github.com/ipfs/go-ds-s3'
-				'versions.txt')
+				'versions.txt'
+				'ipfs.service')
 noextract=()
 b2sums=('SKIP'
 				'SKIP'
-				'ba0b7a7ca53a069a58ec6f9dbab98f10120a5ffd2f8ce83fabf21ae8749e29151879d3245a8cf7e6380119c19a57114f7c4696dcaf93c3b712ad3c2eb1c78058')
+				'ba0b7a7ca53a069a58ec6f9dbab98f10120a5ffd2f8ce83fabf21ae8749e29151879d3245a8cf7e6380119c19a57114f7c4696dcaf93c3b712ad3c2eb1c78058'
+				'98ce04f8761e131fe75d2ec0d37be254ebe141df3110d1eb2a40c89f070551a9db32183817ad0dfcc465ca21b36abb9afffda00f5cac8b068eafeadc7a9865ef')
 
 prepare() {
 	cd "$srcdir/$_pkgname"
@@ -102,6 +104,8 @@ check() {
 package() {
 	cd "$srcdir/$_pkgname"
 	mkdir -p $pkgdir/usr/bin
+	mkdir -p $pgkdir/lib/systemd/system
 	cp cmd/ipfs/ipfs $pkgdir/usr/bin/ipfs
+	cp ipfs.service $pgkdir/lib/systemd/system/ipfs.service
 	printf "\033[36;1mBuild to: $pkgdir/usr/bin/ipfs\n\033[0m"
 }
