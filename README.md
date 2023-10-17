@@ -29,7 +29,7 @@ sudo pacman -U kubo-s3-git-*.pkg.tar.xz
 #run tests
 makepkg --printsrcinfo > .SRCINFO
 #verify changes, f.E. using: git status ; git diff
-git add PKGBUILD .SRCINFO .gitignore versions.txt
+git add PKGBUILD .SRCINFO .gitignore versions.txt prod.install ipfs.service
 git commit -m "useful commit message"
 git push
 cd ..
