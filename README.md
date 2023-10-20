@@ -4,8 +4,7 @@ This builds IPFS Kubo with S3 Datastore Implementation.
 
 ## Todo
 
-- Error occuring using yay (using makepkg everything works): /home/arch/.cache/yay/kubo-s3-git/PKGBUILD: line 83: mod: command not found
-- Test Service :-)
+- latest S3 Version not compilable
 
 ## Building
 
