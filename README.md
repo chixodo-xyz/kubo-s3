@@ -4,7 +4,7 @@ This builds IPFS Kubo with S3 Datastore Implementation.
 
 ## Todo
 
-- latest S3 Version not compilable
+- 
 
 ## Building
 
